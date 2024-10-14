@@ -3,7 +3,6 @@ from fastapi.staticfiles import StaticFiles
 
 app = FastAPI()
 
-# "static"ディレクトリをホスティング
 app.mount("/static", StaticFiles(directory="static"), name="static")
 
 @app.get("/")
